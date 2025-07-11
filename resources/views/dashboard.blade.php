@@ -346,7 +346,7 @@
         </div>
     </div>
     <!-- table start -->
-    <div class="p-8 bg-white dark:bg-gray-700 mt-5 rounded-xl">
+    <div class="p-8 bg-slate-150 shadow-sm border-4 border-gray-50 dark:bg-gray-700 mt-5 rounded-xl">
         <div class="flex flex-col">
             <span class="font-bold text-xl text-gray-900 dark:text-slate-100">Performance Team</span>
             <span class="text-gray-500 dark:text-slate-100 font-extralight text-sm">Monitoring performance team
@@ -354,7 +354,7 @@
         </div>
         <div class="relative overflow-x-auto sm:rounded-lg mt-5">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-50 dark:text-gray-600">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-300 dark:bg-gray-50 dark:text-gray-600">
                     <tr>
                         <th scope="col" class="px-6 py-3">
                             ID
