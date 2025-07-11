@@ -1,6 +1,6 @@
 <header class="bg-white dark:bg-gray-800 rounded-xl shadow-sm">
     <div
-        class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="flex flex-col sm:flex-row items-center gap-4">
             <!-- Judul -->
             <div class="text-lg font-semibold text-gray-900 dark:text-gray-100">

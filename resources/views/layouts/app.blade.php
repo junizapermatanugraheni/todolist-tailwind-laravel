@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Alpine Js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    {{-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
 
     <!-- Dark Mode & Light Mode Script -->
     <script>
@@ -37,6 +37,17 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    <link href="https://unpkg.com/flowbite@2.3.0/dist/flowbite.min.css" rel="stylesheet" />
+    <style>
+        #datepicker-inline .datepicker-container {
+            box-shadow: none !important;
+        }
+
+        #datepicker-inline .datepicker {
+            box-shadow: none !important;
+        }
+    </style>
+    @stack('styles')
 
 </head>
 
