@@ -1,8 +1,35 @@
 @php
-    $card = [[]];
+$card = [[]];
 @endphp
 <x-app-layout>
-    @include('layouts.header', ['title' => 'Dashboard'])
+    @include('layouts.header')
+    <div class="bg-white dark:bg-gray-700 rounded-xl  my-5 px-7 py-3 flex flex-row justify-between items-center">
+        <span class="text-gray-900 dark:text-white text-2xl font-bold">
+            Dashboard Task
+        </span>
+        <div class="flex flex-row">
+            <div class="relative w-62 max-w-sm">
+                <input id="rangeInput"
+                    type="text"
+                    placeholder="2025-07-12 to 2025-07-15"
+                    class="w-62 pl-10 pr-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-400" />
+                <!-- Calendar Icon (Heroicons or any SVG) -->
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                </div>
+            </div>
+            <button class="ms-3 bg-white rounded-lg border border-gray-300 px-5 flex flex-row items-center text-gray-800 gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+                </svg>
+                Filter
+            </button>
+        </div>
+    </div>
     <div class="flex flex-row sm:flex-col md:flex-col lg:flex-row gap-4 mt-5">
         <div class="flex-1 bg-white dark:bg-gray-700 rounded-xl px-6 py-3 flex flex-row justify-between items-center">
             <div class="flex flex-col">
@@ -499,11 +526,19 @@
                             <span class="badge-yellow">Good</span>
                         </td>
                     </tr>
-                  
+
                 </tbody>
             </table>
         </div>
     </div>
     <!-- table end -->
-
+    @push('scripts')
+    <script>
+        flatpickr("#rangeInput", {
+            mode: "range",
+            dateFormat: "Y-m-d",
+            defaultDate: [new Date()], // optional: set tanggal hari ini
+        });
+    </script>
+    @endpush
 </x-app-layout>
