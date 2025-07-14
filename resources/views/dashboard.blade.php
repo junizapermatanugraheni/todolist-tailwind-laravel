@@ -3,6 +3,34 @@
 @endphp
 <x-app-layout>
     @include('layouts.header', ['title' => 'Dashboard'])
+    <div class="flex flex-row justify-between items-center mt-5 px-2">
+        <div class="text-lg font-semibold text-gray-900 dark:text-gray-100 ">
+            My Dashboard
+        </div>
+        <div class="flex flex-row gap-2">
+            <div class="relative w-full max-w-sm">
+                <input id="rangeInput" type="text" placeholder="2025-07-12 to 2025-07-15"
+                    class="w-full pl-10 pr-4 py-2 bg-transparent border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-400 dark:text-slate-200" />
+                <!-- Calendar Icon (Heroicons or any SVG) -->
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 dark:text-slate-200" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                </div>
+            </div>
+            <button
+                class="text-gray-600 bg-transparent border border-gray-300 rounded-lg px-4 py-2 flex flex-row gap-2 dark:text-slate-200">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 dark:text-slate-200">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z" />
+                </svg>
+                Filter
+            </button>
+        </div>
+    </div>
     <div class="flex flex-row sm:flex-col md:flex-col lg:flex-row gap-4 mt-5">
         <div class="flex-1 bg-white dark:bg-gray-700 rounded-xl px-6 py-3 flex flex-row justify-between items-center">
             <div class="flex flex-col">
@@ -499,11 +527,20 @@
                             <span class="badge-yellow">Good</span>
                         </td>
                     </tr>
-                  
+
                 </tbody>
             </table>
         </div>
     </div>
     <!-- table end -->
 
+    @push('scripts')
+        <script>
+            flatpickr("#rangeInput", {
+                mode: "range",
+                dateFormat: "Y-m-d",
+                defaultDate: [new Date()], // optional: set tanggal hari ini
+            });
+        </script>
+    @endpush
 </x-app-layout>

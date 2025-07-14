@@ -15,6 +15,13 @@
     <!-- Alpine Js -->
     {{-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
 
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- Date picker -->
+    <script src="https://unpkg.com/flowbite@2.2.0/dist/datepicker.js"></script>
+
     <!-- Dark Mode & Light Mode Script -->
     <script>
         (() => {
