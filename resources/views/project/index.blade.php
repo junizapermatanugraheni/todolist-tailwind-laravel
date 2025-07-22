@@ -36,10 +36,18 @@
                         d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM10 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.5 15.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
                 </svg>
             </div>
-            <div
-                class="bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
+            <div class="bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
                 <div class="flex flex-col">
-                    <span class="text-xl font-bold text-gray-900 dark:text-white">E-Commerce Clothes</span>
+                    <div class="flex flex-row justify-between items-center">
+                        <span class="text-xl font-bold text-gray-900 dark:text-white">E-Commerce Clothes</span>
+                        <a href="{{ route('task.index') }}">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                class="size-5 dark:text-white">
+                                <path
+                                    d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM10 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.5 15.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+                            </svg>
+                        </a>
+                    </div>
                     <div
                         class="flex flex-row gap-2 items-center text-xs font-light mt-2 text-gray-500 dark:text-gray-300">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -104,8 +112,7 @@
                     </div>
                 </div>
             </div>
-            <div
-                class="bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
+            <div class="bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
                 <div class="flex flex-col">
                     <span class="text-xl font-bold text-gray-900 dark:text-white">E-Commerce Clothes</span>
                     <div
@@ -193,14 +200,13 @@
                         d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM10 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.5 15.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
                 </svg>
             </div>
-            <div
-                class="bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
+            <div class="bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
                 <div class="flex flex-col">
                     <span class="text-xl font-bold text-gray-900 dark:text-white">E-Commerce Clothes</span>
                     <div
                         class="flex flex-row gap-2 items-center text-xs font-light mt-2 text-gray-500 dark:text-gray-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-4">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
@@ -261,7 +267,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="flex-1 flex flex-col gap-4">
             <div class="flex flex-row items-center justify-between gap-10 pe-4 rounded-xl border border-green-400">
@@ -283,8 +288,7 @@
                         d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM10 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.5 15.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
                 </svg>
             </div>
-            <div
-                class="bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
+            <div class="bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
                 <div class="flex flex-col">
                     <span class="text-xl font-bold text-gray-900 dark:text-white">E-Commerce Clothes</span>
                     <div

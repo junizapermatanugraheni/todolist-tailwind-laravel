@@ -2,7 +2,7 @@
     $menus = [
         ['title' => 'Dashboard', 'icon' => 'dashboard-icon', 'route' =>  route('dashboard')],
         ['title' => 'Project', 'icon' => 'project-icon', 'route' => route('project.index')],
-        ['title' => 'Task', 'icon' => 'task-icon', 'route' => '#'],
+        ['title' => 'Task', 'icon' => 'task-icon', 'route' => route('task.index')],
         ['title' => 'Calendar', 'icon' => 'calendar-icon', 'route' => '#'],
         ['divider' => true],
         ['title' => 'Profile', 'icon' => 'profile-icon', 'route' => '#'],

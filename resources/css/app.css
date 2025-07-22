@@ -44,6 +44,10 @@
     @apply bg-pink-100 text-pink-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-lg dark:bg-pink-900 dark:text-pink-300;
 }
 
+.badge-gray {
+    @apply bg-gray-200 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-lg dark:bg-gray-900 dark:text-gray-300;
+}
+
 /* class button */
 
 .btn-primary {
