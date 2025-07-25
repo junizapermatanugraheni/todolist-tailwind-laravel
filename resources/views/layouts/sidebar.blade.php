@@ -2,7 +2,7 @@
     $menus = [
         ['title' => 'Dashboard', 'icon' => 'dashboard-icon', 'route' =>  route('dashboard')],
         ['title' => 'Project', 'icon' => 'project-icon', 'route' => route('project.index')],
-        ['title' => 'Task', 'icon' => 'task-icon', 'route' => '#'],
+        ['title' => 'Task', 'icon' => 'task-icon', 'route' => route('task.index')],
         ['title' => 'Calendar', 'icon' => 'calendar-icon', 'route' => '#'],
         ['divider' => true],
         ['title' => 'Profile', 'icon' => 'profile-icon', 'route' => '#'],
@@ -38,8 +38,6 @@
                 <path stroke-linecap="round" stroke-linejoin="round"
                     d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
             </svg>
-
-
         </div>
         <input type="text" id="input-group-1"
             class="bg-gray-50 text-gray-900 border-0 text-sm rounded-lg   block w-full ps-10 p-2.5  dark:bg-gray-700  dark:placeholder-gray-400 dark:text-white "

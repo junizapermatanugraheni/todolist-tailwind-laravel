@@ -134,7 +134,7 @@ $card = [[]];
     </div>
     <div class="flex flex-row sm:flex-col md:flex-col lg:flex-row gap-4 mt-5">
         <div
-            class="flex-1 bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
+            class="flex-1 bg-white dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
             <div class="flex flex-col">
                 <span
                     class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-lg dark:bg-blue-900 dark:text-blue-300 mb-6 text-center inline-flex w-fit">UI
@@ -194,7 +194,7 @@ $card = [[]];
             </div>
         </div>
         <div
-            class="flex-1 bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
+            class="flex-1 bg-white dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
             <div class="flex flex-col">
                 <span
                     class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-lg dark:bg-green-900 dark:text-green-300 mb-6 text-center inline-flex w-fit">Build
@@ -254,7 +254,7 @@ $card = [[]];
             </div>
         </div>
         <div
-            class="flex-1 bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
+            class="flex-1 bg-white dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
             <div class="flex flex-col">
                 <span
                     class="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-lg dark:bg-yellow-900 dark:text-yellow-300 mb-6 inline-flex w-fit">Implementasi</span>
@@ -313,7 +313,7 @@ $card = [[]];
             </div>
         </div>
         <div
-            class="flex-1 bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
+            class="flex-1 bg-white dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
             <div class="flex flex-col">
                 <span
                     class="bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-lg dark:bg-yellow-900 dark:text-yellow-300 mb-6 inline-flex w-fit">Implementasi</span>
@@ -373,7 +373,7 @@ $card = [[]];
         </div>
     </div>
     <!-- table start -->
-    <div class="p-8 bg-white dark:bg-gray-700 mt-5 rounded-xl">
+    <div class="p-8 bg-white shadow-sm border-4 border-gray-50 dark:bg-gray-700 mt-5 rounded-xl">
         <div class="flex flex-col">
             <span class="font-bold text-xl text-gray-900 dark:text-slate-100">Performance Team</span>
             <span class="text-gray-500 dark:text-slate-100 font-extralight text-sm">Monitoring performance team
@@ -381,7 +381,7 @@ $card = [[]];
         </div>
         <div class="relative overflow-x-auto sm:rounded-lg mt-5">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-50 dark:text-gray-600">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-300 dark:bg-gray-50 dark:text-gray-600">
                     <tr>
                         <th scope="col" class="px-6 py-3">
                             ID
