@@ -1,8 +1,32 @@
 <x-app-layout>
     @include('layouts.header', ['title' => 'Project'])
-    <div class="flex flex-row justify-between items-center mt-5 px-2">
-        <div class="text-lg font-semibold text-gray-900 dark:text-gray-100 ">
+    <div class="flex flex-row justify-between items-center my-5 px-2">
+        {{-- <div class="text-lg font-semibold text-gray-900 dark:text-gray-100 ">
             Project
+        </div> --}}
+        <div class="flex flex-row items-center">
+            <span class="me-3 text-sm font-normal text-gray-400">Filter by :</span>
+            <ul class="flex flex-wrap -mb-px">
+                <li class="me-2">
+                    <a href="#all"
+                        class="inline-block px-3 py-2 border border-indigo-400 text-white rounded-3xl text-sm dark:text-white bg-indigo-700 active"
+                        aria-current="page">All
+                        Project</a>
+                </li>
+                <li class="me-2">
+                    <a href="#onprogress"
+                        class="inline-block px-3 py-2 border border-indigo-400 rounded-3xl text-sm text-indigo-700 dark:text-white">On
+                        Progress</a>
+                </li>
+                <li class="me-2">
+                    <a href="#review"
+                        class="inline-block px-3 py-2 border border-indigo-400 rounded-3xl text-sm text-indigo-700 dark:text-white">Review</a>
+                </li>
+                <li class="me-2">
+                    <a href="#completed"
+                        class="inline-block px-3 py-2 border border-indigo-400 rounded-3xl text-sm text-indigo-700 dark:text-white">Completed</a>
+                </li>
+            </ul>
         </div>
         <button class="btn-indigo flex flex-row gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
@@ -12,7 +36,258 @@
             Add Project
         </button>
     </div>
-    <div class="flex flex-row gap-5 mt-5">
+    <div id="all" class="bg-white dark:bg-gray-700 p-5 rounded-xl">
+        <h1 class="font-bold dark:text-white text-lg">List All Project</h1>
+        <div class="relative overflow-x-auto sm:rounded-lg mt-5">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead
+                    class="text-xs text-gray-700 uppercase bg-transparent dark:bg-gray-50 dark:text-gray-600 border-y">
+                    <tr>
+                        <th scope="col" class="px-6 py-5">
+                            ID
+                        </th>
+                        <th scope="col" class="px-6 py-5">
+                            Name
+                        </th>
+                        <th scope="col" class="px-6 py-5">
+                            Assigned
+                        </th>
+                        <th scope="col" class="px-6 py-5">
+                            Completed
+                        </th>
+                        <th scope="col" class="px-6 py-5">
+                            On Going
+                        </th>
+                        <th scope="col" class="px-6 py-5">
+                            Overdue
+                        </th>
+                        <th scope="col" class="px-6 py-5">
+                            Department
+                        </th>
+                        <th scope="col" class="px-6 py-5 text-center">
+                            Status
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-y dark:bg-gray-800 dark:border-gray-700 border-gray-200 bg-indigo-100">
+                        <td class="px-6 py-4 font-light">
+                            0250100
+                        </td>
+                        <td
+                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex flex-row items-center">
+                            <img class="w-8 h-8 border-white rounded-lg dark:border-gray-800 me-2"
+                                src="https://i.pinimg.com/736x/a7/96/9e/a7969ea5987c3a96e90c4f1896656d5a.jpg"
+                                alt=""> John Smith
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            120 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            50 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            100 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            75 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            Development
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                            <span class="badge-yellow">On Progress</span>
+                        </td>
+                    </tr>
+                    <tr class="border-y dark:bg-gray-700 dark:border-gray-700 border-gray-200">
+                        <td class="px-6 py-4 font-light">
+                            0250100
+                        </td>
+                        <td
+                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex flex-row items-center">
+                            <img class="w-8 h-8 border-white rounded-lg dark:border-gray-800 me-2"
+                                src="https://i.pinimg.com/736x/a7/96/9e/a7969ea5987c3a96e90c4f1896656d5a.jpg"
+                                alt=""> Romi Smith
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            120 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            50 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            100 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            75 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            Development
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                            <span class="badge-green">Completed</span>
+                        </td>
+                    </tr>
+                    <tr class="border-y dark:bg-gray-800 dark:border-gray-700 border-gray-200 bg-indigo-100">
+                        <td class="px-6 py-4 font-light">
+                            0250100
+                        </td>
+                        <td
+                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex flex-row items-center">
+                            <img class="w-8 h-8 border-white rounded-lg dark:border-gray-800 me-2"
+                                src="https://i.pinimg.com/736x/a7/96/9e/a7969ea5987c3a96e90c4f1896656d5a.jpg"
+                                alt=""> Soy Joy
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            120 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            50 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            100 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            75 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            Development
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                            <span class="badge-orange">Review</span>
+                        </td>
+                    </tr>
+                    <tr class="border-y dark:bg-gray-700 dark:border-gray-700 border-gray-200">
+                        <td class="px-6 py-4 font-light">
+                            0250100
+                        </td>
+                        <td
+                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex flex-row items-center">
+                            <img class="w-8 h-8 border-white rounded-lg dark:border-gray-800 me-2"
+                                src="https://i.pinimg.com/736x/a7/96/9e/a7969ea5987c3a96e90c4f1896656d5a.jpg"
+                                alt=""> Macarell
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            120 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            50 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            100 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            75 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            Development
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                            <span class="badge-yellow">On Progress</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="onprogress" class="hidden bg-white p-5 rounded-xl dark:bg-gray-700">
+        <h1 class="font-bold dark:text-white text-lg">List Project On Progress</h1>
+        <div class="relative overflow-x-auto sm:rounded-lg mt-5">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead
+                    class="text-xs text-gray-700 uppercase bg-transparent dark:bg-gray-50 dark:text-gray-600 border-y">
+                    <tr>
+                        <th scope="col" class="px-6 py-5">
+                            ID
+                        </th>
+                        <th scope="col" class="px-6 py-5">
+                            Name
+                        </th>
+                        <th scope="col" class="px-6 py-5">
+                            Assigned
+                        </th>
+                        <th scope="col" class="px-6 py-5">
+                            Completed
+                        </th>
+                        <th scope="col" class="px-6 py-5">
+                            On Going
+                        </th>
+                        <th scope="col" class="px-6 py-5">
+                            Overdue
+                        </th>
+                        <th scope="col" class="px-6 py-5">
+                            Department
+                        </th>
+                        <th scope="col" class="px-6 py-5 text-center">
+                            Status
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-y dark:bg-gray-800 dark:border-gray-700 border-gray-200 bg-indigo-100">
+                        <td class="px-6 py-4 font-light">
+                            0250100
+                        </td>
+                        <td
+                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex flex-row items-center">
+                            <img class="w-8 h-8 border-white rounded-lg dark:border-gray-800 me-2"
+                                src="https://i.pinimg.com/736x/a7/96/9e/a7969ea5987c3a96e90c4f1896656d5a.jpg"
+                                alt=""> John Smith
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            120 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            50 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            100 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            75 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            Development
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                            <span class="badge-yellow">On Progress</span>
+                        </td>
+                    </tr>
+                    <tr class="border-y dark:bg-gray-700 dark:border-gray-700 border-gray-200">
+                        <td class="px-6 py-4 font-light">
+                            0250100
+                        </td>
+                        <td
+                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white flex flex-row items-center">
+                            <img class="w-8 h-8 border-white rounded-lg dark:border-gray-800 me-2"
+                                src="https://i.pinimg.com/736x/a7/96/9e/a7969ea5987c3a96e90c4f1896656d5a.jpg"
+                                alt=""> Macarell
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            120 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            50 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            100 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            75 task
+                        </td>
+                        <td class="px-6 py-4 font-light">
+                            Development
+                        </td>
+                        <td class="px-6 py-4 text-center">
+                            <span class="badge-yellow">On Progress</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {{-- <div class="flex flex-row gap-5 mt-5">
         <div class="flex-1 flex flex-col gap-4">
             <div class="flex flex-row items-center justify-between gap-10 border border-orange-400 rounded-xl pe-4">
                 <div class="flex flex-row gap-2 dark:text-white items-center font-semibold">
@@ -36,7 +311,7 @@
                         d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM10 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.5 15.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
                 </svg>
             </div>
-            <div class="bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
+            <div class="bg-white dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
                 <div class="flex flex-col">
                     <div class="flex flex-row justify-between items-center">
                         <span class="text-xl font-bold text-gray-900 dark:text-white">E-Commerce Clothes</span>
@@ -112,7 +387,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
+            <div class="bg-white dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
                 <div class="flex flex-col">
                     <span class="text-xl font-bold text-gray-900 dark:text-white">E-Commerce Clothes</span>
                     <div
@@ -200,7 +475,7 @@
                         d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM10 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.5 15.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
                 </svg>
             </div>
-            <div class="bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
+            <div class="bg-white dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
                 <div class="flex flex-col">
                     <span class="text-xl font-bold text-gray-900 dark:text-white">E-Commerce Clothes</span>
                     <div
@@ -288,7 +563,7 @@
                         d="M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM10 8.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM11.5 15.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
                 </svg>
             </div>
-            <div class="bg-slate-150 dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
+            <div class="bg-white dark:bg-gray-700 rounded-xl p-6 border-4 border-slate-50 shadow-sm dark:border-0">
                 <div class="flex flex-col">
                     <span class="text-xl font-bold text-gray-900 dark:text-white">E-Commerce Clothes</span>
                     <div
@@ -357,7 +632,7 @@
             </div>
         </div>
         <div class="flex-1 flex flex-col">
-            <div class="bg-slate-150 border-4 border-white rounded-xl px-6 py-6 flex flex-col dark:bg-gray-700">
+            <div class="bg-white border-4 border-slate-50 rounded-xl px-6 py-6 flex flex-col dark:bg-gray-700">
                 <div class="flex flex-row justify-between items-center dark:text-white">
                     <span class="font-semibold text-md ">OUR TEAM</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -430,10 +705,10 @@
                 <div id="calendar" class="grid grid-cols-7 text-center gap-1 text-sm text-gray-700"></div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     @push('scripts')
-        <script>
+        {{-- <script>
             const calendar = document.getElementById("calendar");
             const monthYear = document.getElementById("monthYear");
             let date = new Date();
@@ -473,6 +748,38 @@
             }
 
             renderCalendar();
+        </script> --}}
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const tabLinks = document.querySelectorAll("a[href^='#']");
+                const tabContents = document.querySelectorAll("#all, #onprogress, #review, #completed");
+
+                tabLinks.forEach(link => {
+                    link.addEventListener("click", function(e) {
+                        e.preventDefault();
+
+                        // Hapus semua status aktif
+                        tabLinks.forEach(l => {
+                            l.classList.remove("text-white",
+                                "bg-indigo-700", "active");
+                            l.classList.add("text-indigo-700");
+                        });
+                        tabContents.forEach(c => c.classList.add("hidden"));
+
+                        // Tambahkan status aktif ke tab yg diklik
+                        this.classList.add("text-white", "dark:text-white",
+                            "bg-indigo-700", "active");
+
+                        // Tampilkan konten yang sesuai
+                        const targetId = this.getAttribute("href");
+                        const target = document.querySelector(targetId);
+                        if (target) {
+                            target.classList.remove("hidden");
+                        }
+                    });
+                });
+            });
         </script>
     @endpush
 </x-app-layout>
